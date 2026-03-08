@@ -165,7 +165,7 @@ const ConditionsSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-2 ">
           {conditions.map((c, i) => (
             <motion.div
               key={i}
