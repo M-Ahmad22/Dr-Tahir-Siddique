@@ -30,18 +30,17 @@ const AppointmentSection = () => {
   const currentMonth = today.toLocaleString("default", { month: "long" });
   const currentYear = today.getFullYear();
 
+  /* Generate available days (today → end of month, no Sundays) */
   const getAvailableDays = () => {
     const days: number[] = [];
 
     const monthIndex = today.getMonth();
     const todayDate = today.getDate();
-
     const totalDays = new Date(currentYear, monthIndex + 1, 0).getDate();
 
     for (let d = todayDate; d <= totalDays; d++) {
       const checkDate = new Date(currentYear, monthIndex, d);
 
-      // remove Sundays
       if (checkDate.getDay() !== 0) {
         days.push(d);
       }
@@ -71,14 +70,31 @@ const AppointmentSection = () => {
 
   const timeSlots = generateTimeSlots();
 
+  /* Submit */
   const handleSubmit = () => {
-    if (!name || !phone || !day || !time) {
-      alert("Please fill required fields");
+    const phoneRegex = /^03[0-9]{9}$/;
+
+    if (!name.trim()) {
+      alert("Please enter patient name");
+      return;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      alert("Enter a valid Pakistani phone number (03XXXXXXXXX)");
+      return;
+    }
+
+    if (!day) {
+      alert("Please select appointment day");
+      return;
+    }
+
+    if (!time) {
+      alert("Please select appointment time");
       return;
     }
 
     const number = "923036311116";
-
     const fullDate = `${day} ${currentMonth} ${currentYear}`;
 
     const text = `
@@ -88,7 +104,9 @@ Name: ${name}
 Phone: ${phone}
 Date: ${fullDate}
 Time: ${time}
-Appointment Type: ${appointmentType === "physical" ? "Clinic Visit" : "Video Consultation"}
+Appointment Type: ${
+      appointmentType === "physical" ? "Clinic Visit" : "Video Consultation"
+    }
 Message: ${message}
 `;
 
@@ -169,13 +187,20 @@ Message: ${message}
                 <Input
                   placeholder="Patient Name"
                   value={name}
+                  required
                   onChange={(e) => setName(e.target.value)}
                 />
 
                 <Input
-                  placeholder="Phone Number"
+                  placeholder="03XXXXXXXXX"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  maxLength={11}
+                  required
+                  inputMode="numeric"
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/\D/g, "");
+                    setPhone(value);
+                  }}
                 />
               </div>
 
@@ -183,6 +208,7 @@ Message: ${message}
               <div className="grid sm:grid-cols-3 gap-4">
                 <select
                   value={day}
+                  required
                   onChange={(e) => setDay(e.target.value)}
                   className="rounded-xl border px-3 py-2"
                 >
@@ -197,9 +223,10 @@ Message: ${message}
                 <Input value={currentYear} readOnly className="bg-muted" />
               </div>
 
-              {/* Time Slots */}
+              {/* Time */}
               <select
                 value={time}
+                required
                 onChange={(e) => setTime(e.target.value)}
                 className="rounded-xl border px-3 py-2"
               >

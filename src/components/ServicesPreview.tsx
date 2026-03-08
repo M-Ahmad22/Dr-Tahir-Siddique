@@ -9,12 +9,36 @@ import serviceGastro from "@/assets/service-gastro.png";
 import serviceFamily from "@/assets/service-family.png";
 
 const services = [
-  { key: "services.colonoscopy", desc: "Advanced diagnostic and therapeutic colonoscopy procedures.", img: serviceColonoscopy },
-  { key: "services.endoscopy", desc: "Upper GI endoscopy for accurate diagnosis.", img: serviceEndoscopy },
-  { key: "services.diabetes", desc: "Comprehensive diabetes care and management plans.", img: serviceDiabetes },
-  { key: "services.hepB", desc: "Evidence-based Hepatitis B treatment protocols.", img: serviceHepatitis },
-  { key: "services.hepC", desc: "Complete Hepatitis C cure with modern antivirals.", img: serviceGastro },
-  { key: "services.constipation", desc: "Effective constipation diagnosis and treatment.", img: serviceFamily },
+  {
+    key: "services.colonoscopy",
+    desc: "Advanced diagnostic and therapeutic colonoscopy procedures.",
+    img: serviceColonoscopy,
+  },
+  {
+    key: "services.endoscopy",
+    desc: "Upper GI endoscopy for accurate diagnosis.",
+    img: serviceEndoscopy,
+  },
+  {
+    key: "services.diabetes",
+    desc: "Comprehensive diabetes care and management plans.",
+    img: serviceDiabetes,
+  },
+  {
+    key: "services.hepB",
+    desc: "Evidence-based Hepatitis B treatment protocols.",
+    img: serviceHepatitis,
+  },
+  {
+    key: "services.hepC",
+    desc: "Complete Hepatitis C cure with modern antivirals.",
+    img: serviceGastro,
+  },
+  {
+    key: "services.constipation",
+    desc: "Effective constipation diagnosis and treatment.",
+    img: serviceFamily,
+  },
 ];
 
 const ServicesPreview = () => {
@@ -30,12 +54,15 @@ const ServicesPreview = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
-            style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+          <h2
+            className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+            style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+          >
             {t("services.title")}
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            We provide a wide range of medical services with compassionate and comprehensive healthcare tailored to your individual needs.
+            We provide a wide range of medical services with compassionate and
+            comprehensive healthcare tailored to your individual needs.
           </p>
         </motion.div>
 
@@ -58,14 +85,16 @@ const ServicesPreview = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">{t(s.key)}</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {t(s.key)}
+                </h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div className="text-center mt-10"
+        {/* <motion.div className="text-center mt-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -73,7 +102,7 @@ const ServicesPreview = () => {
           <Button variant="heroOutline" asChild>
             <a href="/services">{t("services.viewAll")}</a>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
