@@ -212,7 +212,7 @@ const EducationSection = () => {
             </div>
 
             {/* Experience - Right (offset down on desktop) */}
-            <div className="lg:mt-0 mt-0">
+            <div className="lg:mt-0 mt-10">
               <motion.div
                 className="flex items-center gap-3 mb-8"
                 initial={{ opacity: 0, x: 20 }}

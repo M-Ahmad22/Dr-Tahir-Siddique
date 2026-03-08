@@ -138,7 +138,7 @@ const HeroSection = () => {
 
       {/* ── Decorative medical SVG shapes ── */}
       <motion.div
-        className="absolute top-40 left-[5%] text-primary/[0.06]"
+        className="absolute top-40 right-[5%] text-primary/[0.06] md:left-[5%]  "
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -157,7 +157,7 @@ const HeroSection = () => {
         <Heart className="w-16 h-16" />
       </motion.div>
       <motion.div
-        className="absolute top-[48%] left-[5%] text-primary/[0.04]"
+        className="absolute top-[60%] left-[5%] text-primary/[0.04] md:top-[48%]  "
         animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
         transition={{
           duration: 8,
