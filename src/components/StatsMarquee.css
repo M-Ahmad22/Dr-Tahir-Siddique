@@ -1,0 +1,23 @@
+.stats-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.stats-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stats-marquee:hover .stats-marquee-track {
+  animation-play-state: paused;
+}

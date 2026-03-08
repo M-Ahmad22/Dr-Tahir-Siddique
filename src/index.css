@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 27% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 27% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 27% 14%;
+
+    --primary: 207 79% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 207 89% 94%;
+    --secondary-foreground: 207 79% 35%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 207 89% 94%;
+    --accent-foreground: 207 79% 35%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 207 79% 51%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 207 79% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 89% 94%;
+    --sidebar-accent-foreground: 207 79% 35%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 207 79% 51%;
+
+    /* Custom medical tokens */
+    --medical-blue: 207 79% 51%;
+    --medical-light: 207 89% 94%;
+    --medical-dark: 207 79% 35%;
+    --medical-gradient: linear-gradient(135deg, hsl(207 79% 51%), hsl(207 89% 60%));
+    --medical-gradient-light: linear-gradient(135deg, hsl(207 89% 94%), hsl(207 80% 88%));
+    --medical-shadow: 0 10px 40px -12px hsl(207 79% 51% / 0.2);
+    --medical-shadow-lg: 0 20px 60px -15px hsl(207 79% 51% / 0.25);
+    --card-shadow: 0 4px 24px -4px hsl(207 20% 50% / 0.1);
+    --card-shadow-hover: 0 12px 32px -8px hsl(207 79% 51% / 0.18);
+    --emergency: 0 72% 51%;
+  }
+
+  .dark {
+    --background: 213 27% 8%;
+    --foreground: 210 40% 98%;
+    --card: 213 27% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 213 27% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 207 79% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 207 40% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 207 40% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 207 79% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .medical-card {
+    @apply bg-card rounded-2xl border border-border;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .medical-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+  .medical-gradient-bg {
+    background: var(--medical-gradient);
+  }
+  .medical-gradient-light-bg {
+    background: var(--medical-gradient-light);
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4;
+  }
+  .container-medical {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* RTL support */
+[dir="rtl"] {
+  font-family: 'Poppins', 'Noto Nastaliq Urdu', sans-serif;
+}
