@@ -10,6 +10,7 @@ import {
   Activity,
 } from "lucide-react";
 import heroDoctor from "@/assets/hero-doctor.png";
+// import heroDoctor from "@/assets/Hero-doctor.jpeg";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
@@ -203,7 +204,13 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Doctor name — typewriter */}
-          <div className="text-lg md:text-xl font-bold tracking-widest uppercase text-foreground mb-3 h-[1.6em]">
+          <div
+            className="text-3xl md:text-3xl font-bold tracking-widest uppercase text-foreground mb-9 md:mb-3 h-[1.6em]"
+            style={{
+              // fontFamily: "'Georgia',  serif",
+              fontWeight: 800,
+            }}
+          >
             {displayedName}
             <span className="inline-block w-[2px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
           </div>
@@ -285,7 +292,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.55 }}
           >
-            24 Years of Trusted Medical Excellence in Lahore. Advanced
+            29 Years of Trusted Medical Excellence in Lahore. Advanced
             gastroenterology care and medical education.
           </motion.p>
 
@@ -320,7 +327,7 @@ const HeroSection = () => {
           >
             <MetricItem
               icon={<Award className="w-5 h-5 text-primary" />}
-              value="24+"
+              value="29+"
               label={t("hero.experience")}
             />
             <MetricItem
@@ -360,25 +367,26 @@ const HeroSection = () => {
               <img
                 src={heroDoctor}
                 alt="Prof. Dr. Tahir Siddique"
-                className="w-full max-w-[420px] mx-auto relative z-10 drop-shadow-2xl"
+                className="w-full max-w-[420px] mx-auto relative z-10 "
                 loading="eager"
               />
               {/* Bottom gradient fade */}
-              {/* <div
+              <div
                 className="absolute bottom-0 left-0 right-0 h-28 z-20"
                 style={{
                   background:
                     "linear-gradient(to top, hsl(var(--background)), transparent)",
                 }}
-              /> */}
+              />
+
               {/* Name overlay */}
               <div className="absolute bottom-4 left-0 right-0 z-30 text-center">
-                <p className="text-white text-sm font-bold tracking-wide">
+                <p className="text-primary text-lg font-bold tracking-wide">
                   Prof. Dr. Tahir Siddique
                 </p>
-                <p className="text-xs text-primary font-medium">
+                {/* <p className="text-xs text-primary font-medium">
                   MedSync Association
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

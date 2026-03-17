@@ -36,28 +36,35 @@ const education = [
 
 const experience = [
   {
-    year: "2021–Present",
+    year: "Present",
     title: "Professor & Dean",
     titleUr: "پروفیسر اور ڈین",
     desc: "Dean of Medicine, Services Hospital Lahore",
     descUr: "ڈین آف میڈیسن، سروسز ہسپتال لاہور",
   },
   {
-    year: "2018–2021",
+    year: "2024-2025",
+    title: "Principal",
+    titleUr: "پروفیسر اور ڈین",
+    desc: "Principal of Nawaz Sharif Medical College, Gujrat",
+    descUr: "ڈین آف میڈیسن، سروسز ہسپتال لاہور",
+  },
+  {
+    year: "2014–Present",
     title: "Professor of Medicine",
     titleUr: "پروفیسر آف میڈیسن",
     desc: "Services Institute of Medical Sciences",
     descUr: "سروسز انسٹی ٹیوٹ آف میڈیکل سائنسز",
   },
   {
-    year: "2012–2018",
+    year: "2010–2013",
     title: "Associate Professor",
     titleUr: "ایسوسی ایٹ پروفیسر",
     desc: "Department of Internal Medicine",
     descUr: "شعبہ داخلی طب",
   },
   {
-    year: "2005–2012",
+    year: "2005–2010",
     title: "Assistant Professor",
     titleUr: "اسسٹنٹ پروفیسر",
     desc: "Clinical Practice & Teaching",

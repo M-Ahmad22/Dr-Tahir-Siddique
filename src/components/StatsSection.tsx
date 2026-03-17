@@ -5,7 +5,7 @@ import "./StatsMarquee.css";
 const stats = [
   {
     icon: Award,
-    value: "24+",
+    value: "29+",
     valueKey: "stats.experience",
     gradient: "white",
   },

@@ -70,13 +70,13 @@ const ServicesPreview = () => {
           {services.map((s, i) => (
             <motion.div
               key={s.key}
-              className="medical-card overflow-hidden group"
+              className="medical-card overflow-hidden group "
               initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
-              <div className="h-48 overflow-hidden">
+              <div className=" overflow-hidden h-48">
                 <img
                   src={s.img}
                   alt={t(s.key)}

@@ -26,8 +26,8 @@ const translations: Record<string, Record<Language, string>> = {
     ur: "ماہر داخلی طب اور معدے کی دیکھ بھال",
   },
   "hero.subtext": {
-    en: "24 Years of Trusted Medical Excellence in Lahore",
-    ur: "لاہور میں 24 سال کی طبی مہارت",
+    en: "29 Years of Trusted Medical Excellence in Lahore",
+    ur: "لاہور میں 29 سال کی طبی مہارت",
   },
   "hero.cta": { en: "Book Appointment", ur: "اپوائنٹمنٹ بک کریں" },
   "hero.viewServices": { en: "View Services", ur: "خدمات دیکھیں" },
@@ -36,7 +36,7 @@ const translations: Record<string, Record<Language, string>> = {
   "hero.waitTime": { en: "Under 15 Min Wait Time", ur: "15 منٹ سے کم انتظار" },
 
   // Stats
-  "stats.experience": { en: "24+ Years Experience", ur: "24+ سال کا تجربہ" },
+  "stats.experience": { en: "29+ Years Experience", ur: "29+ سال کا تجربہ" },
   "stats.reviews": { en: "691+ Verified Reviews", ur: "691+ تصدیق شدہ جائزے" },
   "stats.conditions": {
     en: "50+ Conditions Treated",
@@ -57,8 +57,8 @@ const translations: Record<string, Record<Language, string>> = {
     ur: "ماہر داخلی طب | ماہر معدہ",
   },
   "about.bio": {
-    en: "Prof. Dr. Tahir Siddique is a renowned Internal Medicine Specialist and Gastroenterologist with over 24 years of clinical experience. He is dedicated to providing compassionate, evidence-based care to patients across Pakistan.",
-    ur: "پروفیسر ڈاکٹر طاہر صدیقی ایک معروف ماہر داخلی طب اور ماہر معدہ ہیں جن کا 24 سال سے زیادہ طبی تجربہ ہے۔",
+    en: "Prof. Dr. Tahir Siddique is a renowned Internal Medicine Specialist and Gastroenterologist with over 29 years of clinical experience. He is dedicated to providing compassionate, evidence-based care to patients across Pakistan.",
+    ur: "پروفیسر ڈاکٹر طاہر صدیقی ایک معروف ماہر داخلی طب اور ماہر معدہ ہیں جن کا 29 سال سے زیادہ طبی تجربہ ہے۔",
   },
   "about.readMore": { en: "Read Full Profile", ur: "مکمل پروفائل پڑھیں" },
 
@@ -151,8 +151,8 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Footer
   "footer.description": {
-    en: "Dedicated to providing compassionate, evidence-based medical care for over 24 years.",
-    ur: "24 سال سے زیادہ عرصے سے ہمدردانہ، ثبوت پر مبنی طبی نگہداشت فراہم کر رہے ہیں۔",
+    en: "Dedicated to providing compassionate, evidence-based medical care for over 29 years.",
+    ur: "29 سال سے زیادہ عرصے سے ہمدردانہ، ثبوت پر مبنی طبی نگہداشت فراہم کر رہے ہیں۔",
   },
   "footer.quickLinks": { en: "Quick Links", ur: "فوری لنکس" },
   "footer.services": { en: "Services", ur: "خدمات" },

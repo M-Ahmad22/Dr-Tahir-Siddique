@@ -56,7 +56,10 @@ const AppointmentSection = () => {
     const slots: string[] = [];
 
     for (let h = 15; h <= 19; h++) {
-      for (let m = 0; m < 60; m += 20) {
+      for (let m = 0; m < 60; m += 15) {
+        // stop after 7:45 PM
+        if (h === 19 && m > 45) break;
+
         const hour = h > 12 ? h - 12 : h;
         const ampm = h >= 12 ? "PM" : "AM";
         const minute = m.toString().padStart(2, "0");

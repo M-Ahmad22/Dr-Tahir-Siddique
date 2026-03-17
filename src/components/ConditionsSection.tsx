@@ -165,11 +165,11 @@ const ConditionsSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-2 ">
+        <div className="flex flex-wrap justify-center gap-2  ">
           {conditions.map((c, i) => (
             <motion.div
               key={i}
-              className="group relative w-[160px] sm:w-[180px] md:w-[200px] lg:w-[210px]
+              className="group relative w-[150px] sm:w-[100px] md:w-[200px] lg:w-[210px]
       rounded-3xl overflow-hidden cursor-pointer
       bg-gradient-to-b from-white/80 to-white/40
       backdrop-blur-xl
@@ -184,7 +184,7 @@ const ConditionsSection = () => {
               transition={{ delay: i * 0.04, duration: 0.5 }}
             >
               {/* Image */}
-              <div className="relative h-[180px] flex items-center justify-center p-3 overflow-hidden">
+              <div className="relative h-[130px] sm:h-[180px] flex items-center justify-center p-3 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <img

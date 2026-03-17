@@ -17,10 +17,10 @@ const AboutPreview = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   const bioEn =
-    "Prof. Dr. Tahir Siddique is a renowned Internal Medicine Specialist and Gastroenterologist with over 24 years of clinical excellence. As Dean of Medicine at Services Institute of Medical Sciences, he combines world-class patient care with medical education leadership. His expertise spans gastroenterology, hepatology, endoscopy, and diabetes management — serving thousands of patients across Pakistan with compassion and precision.";
+    "Prof. Dr. Tahir Siddique is a renowned Internal Medicine Specialist and Gastroenterologist with over 29 years of clinical excellence. As Dean of Medicine at Services Institute of Medical Sciences, he combines world-class patient care with medical education leadership. His expertise spans gastroenterology, hepatology, endoscopy, and diabetes management — serving thousands of patients across Pakistan with compassion and precision.";
 
   const bioUr =
-    "پروفیسر ڈاکٹر طاہر صدیقی ایک معروف ماہر داخلی طب اور ماہر معدہ ہیں جن کا 24 سال سے زیادہ طبی تجربہ ہے۔ سروسز انسٹی ٹیوٹ آف میڈیکل سائنسز میں ڈین آف میڈیسن کے طور پر، وہ عالمی معیار کی مریضوں کی دیکھ بھال کو طبی تعلیم کی قیادت کے ساتھ جوڑتے ہیں۔";
+    "پروفیسر ڈاکٹر طاہر صدیقی ایک معروف ماہر داخلی طب اور ماہر معدہ ہیں جن کا 29 سال سے زیادہ طبی تجربہ ہے۔ سروسز انسٹی ٹیوٹ آف میڈیکل سائنسز میں ڈین آف میڈیسن کے طور پر، وہ عالمی معیار کی مریضوں کی دیکھ بھال کو طبی تعلیم کی قیادت کے ساتھ جوڑتے ہیں۔";
 
   const bio = lang === "en" ? bioEn : bioUr;
   const words = bio.split(" ");
@@ -28,7 +28,7 @@ const AboutPreview = () => {
   const stats = [
     {
       icon: Award,
-      value: "24+",
+      value: "29+",
       labelEn: "Years Experience",
       labelUr: "سال کا تجربہ",
     },
